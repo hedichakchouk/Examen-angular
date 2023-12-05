@@ -1,0 +1,76 @@
+/* your-component.component.scss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 100% of the viewport height */
+}
+
+.title  {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.student-list {
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  bottom: 30%;
+  transform: translateX(-50%);}
+
+.student-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc; /* Add a border for separation */
+  border-radius: 8px;
+}
+
+.delete-button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: red; /* Set text color to white for better visibility */
+}
+
+.add-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+/* Style to elevate the container */
+.container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+.mat-table {
+  width: 100%;
+  background-color: white; /* Set the background color to white */
+
+}
+.mat-elevation-z8 {
+  width: 50%;
+  background-color: white;
+}
+.mat-column-matricule,
+.mat-column-dateinstcription,
+.mat-column-nom,
+.mat-column-prenom {
+  color: black;
+}
+
+/* Set the divider color */
+.mat-row,
+.mat-header-row {
+  border-bottom: 1px solid #ccc; /* Adjust the color as needed */
+}

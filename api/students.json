@@ -1,0 +1,44 @@
+[
+  {
+    "matricule": "1",
+    "nom": "Doe",
+    "prenom": "John",
+    "dateInscription": "2023-11-28T12:00:00Z"
+  },
+  {
+    "matricule": "5",
+    "nom": "rihab",
+    "prenom": "jdaida",
+    "dateInscription": "2023-12-02T20:18:55.333Z"
+  },
+  {
+    "matricule": "7",
+    "nom": "rihab",
+    "prenom": "jdaida",
+    "dateInscription": "2023-12-02T20:20:24.250Z"
+  },
+  {
+    "matricule": 7,
+    "nom": "youssef",
+    "prenom": "aouadni",
+    "dateInscription": "2023-12-02T20:47:55.826Z"
+  },
+  {
+    "matricule": 5,
+    "nom": "rihab",
+    "prenom": "aouadni",
+    "dateInscription": "2023-12-02T20:48:05.473Z"
+  },
+  {
+    "matricule": 0,
+    "nom": "jf",
+    "prenom": "jvhvhj",
+    "dateInscription": "2023-12-02T20:59:30.626Z"
+  },
+  {
+    "matricule": 36,
+    "nom": "jf",
+    "prenom": "aouadni",
+    "dateInscription": "2023-12-05T16:41:51.753Z"
+  }
+]

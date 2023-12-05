@@ -1,0 +1,46 @@
+<!-- your-component.component.html -->
+
+<div class="container">
+  <h2 class="title">Liste des étudiants</h2>
+
+  <table mat-table [dataSource]="students" class="mat-elevation-z8">
+    <!-- Matricule Column -->
+    <ng-container matColumnDef="matricule">
+      <th mat-header-cell *matHeaderCellDef> Matricule </th>
+      <td mat-cell *matCellDef="let student"> {{ student.matricule }} </td>
+    </ng-container>
+
+    <!-- Nom Column -->
+    <ng-container matColumnDef="nom">
+      <th mat-header-cell *matHeaderCellDef> Nom </th>
+      <td mat-cell *matCellDef="let student"> {{ student.nom }} </td>
+    </ng-container>
+
+    <!-- Prenom Column -->
+    <ng-container matColumnDef="prenom">
+      <th mat-header-cell *matHeaderCellDef> Prénom </th>
+      <td mat-cell *matCellDef="let student"> {{ student.prenom }} </td>
+    </ng-container>
+    <ng-container matColumnDef="dateinstcription">
+      <th mat-header-cell *matHeaderCellDef> Date instcription </th>
+      <td mat-cell *matCellDef="let student">  {{ formatDate(student.dateInscription) }} </td>
+    </ng-container>
+    <!-- Delete Column -->
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let student">
+        <button mat-icon-button class="delete-button" color="warn" (click)="deleteStudent(student)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['matricule', 'nom', 'prenom', 'dateinstcription','delete']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['matricule', 'nom', 'prenom', 'dateinstcription','delete'];"></tr>
+  </table>
+
+  <!-- Add button in the top right -->
+  <button mat-fab class="add-button" color="primary" (click)="openAddStudentDialog()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

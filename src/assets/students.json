@@ -1,0 +1,4 @@
+[
+  { "matricule": "1", "nom": "Doe", "prenom": "John", "dateInscription": "2023-11-28T12:00:00Z" },
+  { "matricule": "2", "nom": "Smith", "prenom": "Jane", "dateInscription": "2023-11-28T12:30:00Z" }
+]
