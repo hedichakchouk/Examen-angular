@@ -35,6 +35,23 @@ export class StudentService {
     return this.saveStudents();
   }
 
+  deleteStudent(matricule: string): Observable<any> {
+    // Remove the student from the local array by matricule
+    this.students = this.students.filter(student => student.matricule !== matricule);
+
+    // Make a DELETE request to the backend to remove the student by matricule
+    return this.http.delete(`${this.jsonUrl}/${matricule}`).pipe(
+      map(() => {
+        // Optionally, handle any additional logic after successful deletion
+        return { success: true };
+      }),
+      catchError(error => {
+        // Handle or propagate errors
+        console.error('Delete student error:', error);
+        return of({ success: false, error });
+      })
+    );
+  }
   saveStudents(): Observable<any> {
     // Make the PUT request to update the entire array
     return this.http.put(this.jsonUrl, this.students);

@@ -1,76 +1,65 @@
-/* your-component.component.scss */
+/* Adjust the root and body to ensure full height and set the background */
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
-.container {
+body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* 100% of the viewport height */
 }
 
-.title  {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.student-list {
-  list-style-type: none;
-  padding: 0;
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  bottom: 30%;
-  transform: translateX(-50%);}
-
-.student-list li {
-  margin-bottom: 10px;
+.content-wrapper { /* Assuming .container is wrapped in .content-wrapper for full height */
+  flex: 1;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  border: 1px solid #ccc; /* Add a border for separation */
-  border-radius: 8px;
+  flex-direction: column;
 }
 
-.delete-button {
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-  color: red; /* Set text color to white for better visibility */
+
+.container {
+  min-height: 100vh; /* This makes .container at least the height of the viewport */
+}
+
+
+/* Ensure the app-root fills the entire height */
+app-root, .container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  align-items: center;
+  padding: 20px;
+  width: 100%; /* Ensure it takes the full width */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.students-card {
+  width: 100%;
+  max-width: 550px;
+  margin-bottom: 20px; /* Add some space at the bottom */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.mat-elevation-z8 {
+  box-shadow: none; /* Remove default shadow to use card's shadow */
 }
 
 .add-button {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  right: 30px;
+  bottom: 30px;
+  z-index: 1000;
 }
 
-/* Style to elevate the container */
-.container {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 8px;
-}
-.mat-table {
-  width: 100%;
-  background-color: white; /* Set the background color to white */
-
-}
-.mat-elevation-z8 {
-  width: 50%;
-  background-color: white;
-}
-.mat-column-matricule,
-.mat-column-dateinstcription,
-.mat-column-nom,
-.mat-column-prenom {
-  color: black;
-}
-
-/* Set the divider color */
-.mat-row,
-.mat-header-row {
-  border-bottom: 1px solid #ccc; /* Adjust the color as needed */
+/* Additional styles to ensure the content flexes correctly */
+.mat-sidenav-container, .mat-sidenav-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }

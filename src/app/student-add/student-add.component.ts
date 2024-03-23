@@ -1,15 +1,17 @@
 import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {StudentService} from "../student.service";
+import {StudentService} from "../../Services/student.service";
 import {FormBuilder, FormGroup, FormsModule, NgForm, Validators} from "@angular/forms";
 import {Student} from "../../models/student";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatDialog} from "@angular/material/dialog";
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'app-student-add',
   standalone: true,
-  imports: [CommonModule, FormsModule, MatFormFieldModule],
+  imports: [CommonModule, FormsModule, MatFormFieldModule, MatInputModule, MatButtonModule],
   templateUrl: './student-add.component.html',
   styleUrl: './student-add.component.css'
 })

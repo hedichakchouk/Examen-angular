@@ -1,0 +1,45 @@
+/* about-page.component.scss */
+.about-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+
+  h2 {
+    color: #C2185B;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 20px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #ddd;
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 18px;
+        color: #ddd;
+      }
+    }
+  }
+}

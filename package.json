@@ -15,12 +15,16 @@
     "@angular/common": "^17.0.0",
     "@angular/compiler": "^17.0.0",
     "@angular/core": "^17.0.0",
+    "@angular/fire": "^17.0.1",
+    "@angular/flex-layout": "^15.0.0-beta.42",
     "@angular/forms": "^17.0.0",
     "@angular/material": "^17.0.2",
     "@angular/platform-browser": "^17.0.0",
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
     "@types/node": "^20.10.0",
+    "express": "^4.19.1",
+    "firebase": "^10.9.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
@@ -37,5 +41,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.2.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
