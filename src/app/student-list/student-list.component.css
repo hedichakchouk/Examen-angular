@@ -7,6 +7,7 @@ body, html {
 body {
   display: flex;
   flex-direction: column;
+  background-color: red;
 }
 
 .content-wrapper { /* Assuming .container is wrapped in .content-wrapper for full height */
@@ -17,7 +18,7 @@ body {
 
 
 .container {
-  min-height: 100vh; /* This makes .container at least the height of the viewport */
+  min-height: 100%; /* This makes .container at least the height of the viewport */
 }
 
 
