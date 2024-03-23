@@ -10,7 +10,7 @@ import { Student } from "../models/student";
 })
 export class StudentService {
   private students: Student[] = [];
-  private jsonUrl = 'http://localhost:3000/api/students';
+  private jsonUrl = 'http://192.168.1.15:3000/api/students';
 
   constructor(private http: HttpClient) {}
 
