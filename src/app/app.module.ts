@@ -14,10 +14,12 @@ import { DatePipe } from '@angular/common';
 import {FirebaseModule} from "./Firebase.module";
 import {LayoutComponent} from "./layout/layout.component";
 import { MatTooltipModule } from '@angular/material/tooltip';
-
+import {DashboardComponent} from "./dashboard/dashboard.component";
+//import { ChartsModule } from 'ng2-charts'; // Correct import statement
+import {NgChartsModule} from "ng2-charts";
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
 
   ],
   imports: [
@@ -28,7 +30,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     BrowserAnimationsModule,
     FirebaseModule,
     LayoutComponent,
-    MatTooltipModule
+    MatTooltipModule,
+    DashboardComponent,
+    NgChartsModule
+
   ],
   providers: [StudentService,DatePipe],
   bootstrap: [AppComponent]

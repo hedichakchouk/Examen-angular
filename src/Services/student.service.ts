@@ -56,4 +56,8 @@ export class StudentService {
     // Make the PUT request to update the entire array
     return this.http.put(this.jsonUrl, this.students);
   }
+
+  getGenderCounts(): Observable<{ maleCount: number, femaleCount: number }> {
+    return this.http.get<{ maleCount: number, femaleCount: number }>('http://192.168.1.15:3000/api/gender');
+  }
 }

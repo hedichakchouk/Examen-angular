@@ -1,1 +1,14 @@
-<p>dashboard works!</p>
+<div fxLayout="row" fxLayoutAlign="space-evenly center">
+
+  <h2 class="chart-title">Presentation of Number of Male Compared to Female Students</h2>
+
+  <div class="chart-wrapper" style="height:500px;width:700px;margin-left:50px;margin-top:50px">
+    <canvas baseChart
+            [type]="'pie'"
+            [datasets]="chartDataPie"
+            [labels]="chartLabelsPie"
+            [options]="chartOptionsPie">
+    </canvas>
+  </div>
+
+</div>
