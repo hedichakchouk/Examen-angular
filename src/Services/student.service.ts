@@ -58,7 +58,7 @@ export class StudentService {
   }
 
   getGenderCounts(): Observable<{ maleCount: number, femaleCount: number }> {
-    return this.http.get<{ maleCount: number, femaleCount: number }>('http://192.168.1.15:3000/api/gender');
+    return this.http.get<{ maleCount: number, femaleCount: number }>('http://localhost:3000/api/gender');
   }
 
   editStudent(matricule: string, studentData: Student): Observable<any> {

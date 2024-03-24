@@ -9,6 +9,6 @@ export class FileUploadService {
   constructor(private http: HttpClient) { }
 
   uploadFile(formData: FormData) {
-    return this.http.post<any>('http://192.168.1.15:3000/api/upload', formData);
+    return this.http.post<any>('http://localhost:3000/api/upload', formData);
   }
 }
