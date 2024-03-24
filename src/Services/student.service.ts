@@ -52,8 +52,43 @@ export class StudentService {
       })
     );
   }
+
   saveStudents(): Observable<any> {
     // Make the PUT request to update the entire array
     return this.http.put(this.jsonUrl, this.students);
   }
+
+  editStudent(matricule: string, studentData: Student): Observable<any> {
+    // Update the student in the local array
+    const index = this.students.findIndex(student => student.matricule === matricule);
+    if (index !== -1) {
+      this.students[index] = {...this.students[index], ...studentData};
+    }
+
+    // Make a PUT request to the backend to update the student data
+    return this.http.put(`${this.jsonUrl}/${matricule}`, studentData).pipe(
+      map(() => {
+         return { success: true };
+      }),
+      catchError(error => {
+        // Handle or propagate errors
+        console.error('Edit student error:', error);
+        return of({ success: false, error });
+      })
+    );
+  }
+
+  getStudentByMatricule(matricule: string): Observable<any> {
+    return this.http.get<Student>(`${this.jsonUrl}/${matricule}`).pipe(
+      catchError(error => {
+        console.error('Get student by matricule error:', error);
+        return of(null); // or handle it more appropriately
+      })
+    );
+  }
+
+
+
+
+
 }

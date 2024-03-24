@@ -4,6 +4,14 @@ body, html {
   margin: 0;
 }
 
+.red-icon {
+  color: red;
+}
+
+.green-icon {
+  color: green;
+}
+
 body {
   display: flex;
   flex-direction: column;

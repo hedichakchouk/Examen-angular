@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
  import { StudentListComponent } from './student-list/student-list.component';
 import { StudentAddComponent } from './student-add/student-add.component';
@@ -14,6 +15,7 @@ import { DatePipe } from '@angular/common';
 import {FirebaseModule} from "./Firebase.module";
 import {LayoutComponent} from "./layout/layout.component";
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
   ],
   imports: [
+    MatDatepickerModule,
+    MatNativeDateModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
