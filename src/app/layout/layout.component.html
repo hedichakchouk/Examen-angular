@@ -41,7 +41,8 @@
         </div>
       </button>
 
-      <mat-menu #userMenu="matMenu" [overlapTrigger]="false">
+      <div style="background-color: red">
+      <mat-menu #userMenu="matMenu" [overlapTrigger]="true" >
 
         <button class="" mat-menu-item >
           <mat-icon routerLink="/login">account_box</mat-icon>
@@ -53,6 +54,7 @@
         </button>
 
       </mat-menu>
+      </div>
     </mat-toolbar>
 
     <div class="content mt-80 mx-16">
