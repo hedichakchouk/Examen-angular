@@ -15,7 +15,9 @@ import { DatePipe } from '@angular/common';
 import {FirebaseModule} from "./Firebase.module";
 import {LayoutComponent} from "./layout/layout.component";
 import { MatTooltipModule } from '@angular/material/tooltip';
-import {MatDatepickerModule} from "@angular/material/datepicker";
+import {DashboardComponent} from "./dashboard/dashboard.component";
+// import {NgChartsModule} from "ng2-charts";
+ import {MatDatepickerModule} from "@angular/material/datepicker";
 
 @NgModule({
   declarations: [
@@ -32,7 +34,10 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     BrowserAnimationsModule,
     FirebaseModule,
     LayoutComponent,
-    MatTooltipModule
+    MatTooltipModule,
+    DashboardComponent,
+    // NgChartsModule
+
   ],
   providers: [StudentService,DatePipe],
   bootstrap: [AppComponent]

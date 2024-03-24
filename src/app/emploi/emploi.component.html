@@ -1,0 +1,16 @@
+<div class="container">
+  <h2 class="title">Upload Files Here</h2>
+  <div class="upload-container">
+    <input id="fileInput" type="file" (change)="onFileSelected($event)" style="display: none;">
+    <label for="fileInput" class="upload-button">Choose File</label>
+    <button (click)="uploadFile()">Upload</button>
+  </div>
+  <div class="preview-container">
+    <div *ngIf="pdfSrc" class="pdf-preview">
+      <embed [src]="pdfSrc" type="application/pdf" width="100%" height="900px" />
+    </div>
+    <div *ngIf="imageSrc" class="image-preview">
+      <img [src]="imageSrc" alt="Selected Image/PDF" class="preview-image">
+    </div>
+  </div>
+</div>

@@ -29,5 +29,7 @@ export class LayoutComponent {
     this.authService.doLogout().then(()=>{
       this.router.navigate([''])
     })
+
+
   }
 }

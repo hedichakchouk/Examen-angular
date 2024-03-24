@@ -27,3 +27,6 @@
 .submit-button {
   min-width: 150px;
 }
+body {
+  background-color: black;
+}

@@ -1,0 +1,52 @@
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.upload-container {
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+button, label.upload-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px; /* Add margin between the buttons */
+}
+
+button:hover, label.upload-button:hover {
+  background-color: #45a049;
+}
+
+.preview-container {
+  margin-top: 20px;
+  max-height: 500px; /* Set a maximum height for the preview container */
+  overflow-y: auto; /* Add vertical scrollbar when content overflows */
+}
+
+.pdf-preview {
+  display: inline-block;
+  width: 100%;
+}
+
+.image-preview {
+  display: inline-block;
+  width: 100%;
+}
+
+.preview-image {
+  max-width: 100%;
+  height: auto;
+}
